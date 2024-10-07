@@ -39,5 +39,13 @@
             <input type="number" id="quant_bebida1" name="quant_bebida1" min="1" max="10" value="1">
         </div>
     </section>
+    <section id="cart"></section>
+        <h2>Carrinho de Compras</h2>
+        <div id="selected-items"></div>
+        <div id="total">Total: R$<span id="total-price">0.00</span></div>
+        <button onclick="addMoreItems()">Adicionar mais itens</button>
+        <button onclick="checkout()">Finalizar Pedido</button>
+    </section>
+    <script src="script.js"></script> 
 </body>
 </html>
