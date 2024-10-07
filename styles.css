@@ -6,3 +6,15 @@ body {
 header {
     text-align: center;
 }
+
+h1, h2, h3 {
+    color: #333;
+}
+
+.item {
+    margin-bottom: 10px;
+}
+
+#menu, #cart, #checkout {
+    margin-bottom: 30px;
+}
