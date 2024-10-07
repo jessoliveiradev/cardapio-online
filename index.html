@@ -38,13 +38,39 @@
             <label for="bebida1">Refrigerante - R$5,00</label>
             <input type="number" id="quant_bebida1" name="quant_bebida1" min="1" max="10" value="1">
         </div>
+
+        <button onclick="addToCart()">Adicionar ao Carrinho</button>
     </section>
+
     <section id="cart"></section>
         <h2>Carrinho de Compras</h2>
         <div id="selected-items"></div>
         <div id="total">Total: R$<span id="total-price">0.00</span></div>
         <button onclick="addMoreItems()">Adicionar mais itens</button>
         <button onclick="checkout()">Finalizar Pedido</button>
+    </section>
+
+    <section id="checkout" style="display:none;"></section>
+        <h2>Finalização do Pedido</h2>
+        <form id="order-form">
+            <label for="name">Nome completo:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="address">Endereço:</label>
+            <input type="text" id="address" name="address" required>
+
+            <h3>Opções de Pagamento</h3>
+            <input type="radio" id="credit" name="payment" value="credit" required>
+            <label for="credit">Cartão de Crédito</label><br>
+            <input type="radio" id="debit" name="payment" value="debit" required>
+            <label for="debit">Cartão de Débito</label><br>
+            <input type="radio" id="pix" name="payment" value="pix" required>
+            <label for="pix">Pix</label><br>
+
+            <h3>Resumo do Pedido</h3>
+            <div id="order-summary"></div>
+            <button type="submit">Confirmar Pedido</button>
+            <button type="button" onclick="cancelOrder()">Cancelar Pedido</button>
+        </form>
     </section>
     <script src="script.js"></script> 
 </body>
